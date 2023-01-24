@@ -1,6 +1,6 @@
 .header {
   background-color: #533E85;
-  height: 7rem;
+  height: 11rem;
 
   display: flex;
   justify-content: center;
@@ -33,10 +33,34 @@
   justify-content: center;
   align-items: center;
   & li a {
-    color: #fff;
+    color: #533E85;
+    font-size: 19px;
+    font-weight: 600;
   }
   & > * {
     margin-left: 1rem;
     color: #fff;
   }
+}
+.button-login {
+  background-color: #ffffff;
+  color: #533E85;
+  width: 165px;
+  height: 58px;
+  border-color:#533E85;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-login:hover {
+  background-color: #b4a9ce;
+  border-color:#fff;
+  border: 15px;
+  // color: #533E85;
+  width: 165px;
+  height: 58px;
+  border-radius: 10px;
+  // border: 2px;
+  // cursor: pointer;
 }

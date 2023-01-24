@@ -9,9 +9,9 @@ const Home = () => {
       {/* HERO SECTION */}
       <section className="container hero">
         <div className="hero-text">
-          <h2>Awesome App <br/> For Saving <span>Time.</span></h2>
+          <h2>Save your  <br/> Way to Financial<span>Freedom.</span></h2>
           <p>
-          We bring you a mobile app for banking problems that oftenly wasting much of your times.
+          We bring you a new to save, budget and managing all your spendings in one place.
           </p>
           <div className="hero-buttons --flex-start">
             <button className="hero-button">

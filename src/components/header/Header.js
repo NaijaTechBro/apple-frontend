@@ -44,7 +44,7 @@ const Header = () => {
           </ShowOnLogin>
           <ShowOnLogout>
             <li>
-              <button className="--btn --btn-primary">
+              <button className="button-login">
                 <Link to="/login">Login</Link>
               </button>
             </li>
