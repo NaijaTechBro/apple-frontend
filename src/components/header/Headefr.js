@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Header.scss";
-import { BiLogIn } from "react-icons/bi";
+// import { BiLogIn } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { logout, RESET, selectName } from "../../redux/features/auth/authSlice";
 import { ShowOnLogin, ShowOnLogout } from "../protect/HiddenLink";
@@ -30,8 +30,8 @@ const Header = () => {
     <header className="header">
       <nav>
         <div className="logo" onClick={goHome}>
-          <BiLogIn size={35} />
-          <span>AUTH:Z</span>
+          {/* <BiLogIn size={35} /> */}
+          <span>ResoPay</span>
         </div>
 
         <ul className="home-links">

@@ -7,16 +7,31 @@
 }
 
 .hero-text {
-  width: 50%;
+  width: 80%;
   & > * {
     color: #333;
     margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  & > h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  & > p {
+    font-weight: 400;
+    font-size: 25px;
   }
   & > h2 span {
     display: block;
+    color: #533E85;
+    font-weight: 700;
+    font-size: 40px;
   }
   & .hero-buttons a {
     color: #fff;
+    font-weight: 500;
   }
 }
 .hero-image {
@@ -24,7 +39,15 @@
   text-align: center;
 }
 .hero-image img {
-  width: 80%;
+  width: 100%;
+}
+.hero-button {
+  background-color: #533E85;
+  width: 165px;
+  height: 58px;
+  border-color:#533E85;
+  border-radius: 10px;
+  border: none;
 }
 @media screen and (max-width: 600px) {
   .hero {
