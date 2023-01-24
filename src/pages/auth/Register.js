@@ -193,7 +193,7 @@ const Register = () => {
                 </li>
               </ul>
             </Card>
-            <button type="submit" className="--btn --btn-primary --btn-block">
+            <button type="submit" className=" button-reg">
               Register
             </button>
           </form>
