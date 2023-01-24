@@ -7,12 +7,18 @@ const Partner = () => {
         <div className="container partner">
             <div className='partner-text'>
             <h2>Our <span>Trusted</span> Partner</h2>
-            <p>We have reached global level and have 100+ brand partners around the globe.</p>
+            <p>Here are our partners and service providers who have made this possible.</p>
         </div>
-        <div className="section-text">
-            <div className="container-right">
-                </div>
-        </div>
+            <div className='partner-image'>
+                <img src={phoneImg} alt="op" />
+                <img src={phoneImg} alt="op" />
+                <img src={phoneImg} alt="op" />
+                <img src={phoneImg} alt="op" />
+                <img src={phoneImg} alt="op" />
+                <img src={phoneImg} alt="op" />
+                <img src={phoneImg} alt="op" />
+                <img src={phoneImg} alt="op" />
+            </div>
         
     </div>
     )

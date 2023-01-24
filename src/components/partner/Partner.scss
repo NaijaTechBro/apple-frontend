@@ -1,12 +1,12 @@
-.section {
+.partner {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eee;
-    min-height: 80vh;
+    padding: 48px 12px;
+    // min-height: 80vh;
 }
 
-.section-text {
+.partner-text {
     width: 80%;
     & > * {
     color: #333;
@@ -29,39 +29,28 @@
     font-weight: 700;
     font-size: 50px;
     }
-    & .hero-buttons a {
+    partner-buttons a {
     color: #fff;
     font-weight: 500;
     font-size: 18px;
     }
 }
-.section-image {
-    width: 50%;
-    text-align: center;
+.partner-image {
+    margin-left: 4rem;
+    display: table-column;
 }
-.section-image img {
-    width: 100%;
+.partner-image img {
+    width: 150px;
+    height: 100px;
 }
-
-.container-right {
-    display: flex;
-    }
-.container-right h2 {
-    font-weight: 700;
-    margin: 0px 0px 16px;
-    color: #3A3D42;
-}
-.container-right h2 span {
-        color: #533E85;
-    }
 
 
     @media screen and (max-width: 600px) {
-    .section {
+    .partner {
     flex-direction: column;
     }
 
-    .section-text {
+    .partner-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +59,7 @@
     margin: auto;
     text-align: center;
     }
-    .section-image {
+    .partner-image {
     width: 100%;
     &img {
         width: 100%;
