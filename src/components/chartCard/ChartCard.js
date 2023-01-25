@@ -1,3 +1,6 @@
+import { Bar } from 'react-chartjs-2';
+import { Row, Col } from 'react-bootstrap';
+import { BsArrowDown, BsArrowUp } from 'react-icons/bs';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -17,9 +20,7 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-import { Bar } from 'react-chartjs-2';
-import { Row, Col } from 'react-bootstrap';
-import { BsArrowDown, BsArrowUp } from 'react-icons/bs';
+
 
 const ChartCard = ({labels, dataChart, income = 0, expense = 0}) => {
   const options = {
