@@ -9,7 +9,7 @@ const Home = () => {
       {/* HERO SECTION */}
       <section className="container hero">
         <div className="hero-text">
-          <h2>Save your  <br/> Way to Financial<span>Freedom.</span></h2>
+          <h2>Save your<br/> Way to Financial<span>Freedom.</span></h2>
           <p>
           We bring you a new to save, budget and managing all your spendings in one place.
           </p>
