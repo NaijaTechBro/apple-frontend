@@ -52,6 +52,20 @@
         text-align: center;
         margin: 1rem;
       }
+      button {
+        margin: 1rem;
+        margin-left: 7rem;
+        background-color: #533E85;
+        color: #ccc;
+        width: 150px;
+        height: 36px;
+        align-self: center;
+        justify-self: center;
+        border: #533E85;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 15px;
+      }
     }
     .register {
       display: flex;

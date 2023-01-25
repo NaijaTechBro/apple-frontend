@@ -14,6 +14,7 @@ import ChangePassword from "./pages/changePassword/ChangePassword";
 import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import UserList from "./pages/userList/UserList";
+import Dashboard from "./pages/dashboard/Dashboard";
 import {
   getLoginStatus,
   getUser,
@@ -88,6 +89,7 @@ function App() {
                 </Layout>
               }
             />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </GoogleOAuthProvider>
       </BrowserRouter>
