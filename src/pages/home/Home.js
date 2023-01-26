@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.scss";
-import loginImg from "../../assets/login.svg";
+import loginImg from "../../assets/auth-phone.png";
 
 const Home = () => {
   return (
