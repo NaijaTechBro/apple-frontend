@@ -30,9 +30,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
+    "start": "react start",
+    "build": "react build",
+    "test": "react test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
