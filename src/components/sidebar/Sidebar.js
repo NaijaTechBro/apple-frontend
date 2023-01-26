@@ -87,26 +87,36 @@ const Sidebars = ({ darkMode, setDarkMode }) => {
             ResoPay
           </Logo>
         </Link>
-        <Item>
-          <img />
-          <GridViewIcon  style={{ color: "#533E85",
-          fontSize: "120px",
-          "&:hover": { color: "#533E85"},
-        }} />
-          Dashboard
-        </Item>
+        <Link
+          to="/dashboard"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <Item>
+            <GridViewIcon style={{ color: "#533E85",
+            fontSize: "25px",
+            "&:hover": { color: "#533E85"},
+          }} />
+            Dashboard
+          </Item>
+        </Link>
         <Link
           to="savings"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <Item>
-            <SavingsIcon />
+            <SavingsIcon style={{ color: "#533E85",
+            fontSize: "25px",
+            "&:hover": { color: "#533E85"},
+          }} />
             Savings
           </Item>
         </Link>
         <Link to="/dashboard" style={{ textDecoration: "none", color: "inherit" }}>
           <Item>
-            <AddCardIcon />
+            <AddCardIcon style={{ color: "#533E85",
+            fontSize: "25px",
+            "&:hover": { color: "#533E85"},
+          }} />
             Deposit
           </Item>
         </Link>
@@ -115,22 +125,34 @@ const Sidebars = ({ darkMode, setDarkMode }) => {
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <Item>
-            <PaymentsSharpIcon />
+            <PaymentsSharpIcon style={{ color: "#533E85",
+            fontSize: "25px",
+            "&:hover": { color: "#533E85"},
+          }} />
             Withdraw
           </Item>
         </Link>
         <Hr />
         <Title>Transaction</Title>
         <Item>
-          <HistoryOutlinedIcon />
+          <HistoryOutlinedIcon style={{ color: "#533E85",
+          fontSize: "25px",
+          "&:hover": { color: "#533E85"},
+        }} />
           History
         </Item>
         <Item>
-          <SettingsOutlinedIcon />
+          <SettingsOutlinedIcon style={{ color: "#533E85",
+          fontSize: "25px",
+          "&:hover": { color: "#533E85"},
+        }} />
           Settings
         </Item>
         <Item onClick={() => setDarkMode(!darkMode)}>
-          <SettingsBrightnessOutlinedIcon />
+          <SettingsBrightnessOutlinedIcon style={{ color: "#533E85",
+          fontSize: "25px",
+          "&:hover": { color: "#533E85"},
+        }} />
           {darkMode ? "Light" : "Dark"} Mode
         </Item>
         <Hr />
@@ -142,8 +164,20 @@ const Sidebars = ({ darkMode, setDarkMode }) => {
         <Hr />
         <Hr />
         <Hr />
+        <Hr />
+        <Hr />
+        <Hr />
+        <Hr />
+        <Hr />
+        <Hr />
+        <Hr />
+        <Hr />
+        <Hr />
         <Item>
-          <LogoutIcon/>
+          <LogoutIcon style={{ color: "#533E85",
+          fontSize: "25px",
+          "&:hover": { color: "#533E85"},
+        }} />
           Logout
         </Item>
       </Wrapper>
