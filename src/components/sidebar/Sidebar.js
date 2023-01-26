@@ -1,78 +1,50 @@
-//import useState hook to create menu collapse state
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-//import react pro sidebar components
-import {
-  ProSidebar,
-  Menu,
-  MenuItem,
-  SidebarHeader,
-  SidebarFooter,
-  SidebarContent,
-} from "react-pro-sidebar";
+import { logo, sun } from '../../assets/sidebar-assets/assets';
+import { navlinks } from '../../constants';
 
-//import icons from react icons
-import { FaList, FaRegHeart } from "react-icons/fa";
-import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
-import { BiCog } from "react-icons/bi";
+const Icon = ({ styles, name, imgUrl, isActive, disabled, handleClick }) => (
+  <div className={`w-[48px] h-[48px] rounded-[10px] ${isActive && isActive === name && 'bg-[#2c2f32]'} flex justify-center items-center ${!disabled && 'cursor-pointer'} ${styles}`} onClick={handleClick}>
+    {!isActive ? (
+      <img src={imgUrl} alt="fund_logo" className="w-1/2 h-1/2" />
+    ) : (
+      <img src={imgUrl} alt="fund_logo" className={`w-1/2 h-1/2 ${isActive !== name && 'grayscale'}`} />
+    )}
+  </div>
+)
 
-
-//import sidebar css from react-pro-sidebar module and our custom css 
-import "react-pro-sidebar/dist/css/styles.css";
-import "./Sidebar.css";
-
-
-const Header = () => {
-  
-    //create initial menuCollapse state using useState hook
-    const [menuCollapse, setMenuCollapse] = useState(false)
-
-    //create a custom function that will change menucollapse state from false to true and true to false
-  const menuIconClick = () => {
-    //condition checking to change state from true to false and vice versa
-    menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
-  };
+const Sidebars = () => {
+  const navigate = useNavigate();
+  const [isActive, setIsActive] = useState('dashboard');
 
   return (
-    <>
-      <div id="header">
-          {/* collapsed props to change menu size using menucollapse state */}
-        <ProSidebar collapsed={menuCollapse}>
-          <SidebarHeader>
-          <div className="logotext">
-              {/* small and big change using menucollapse state */}
-              <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
-            </div>
-            <div className="closemenu" onClick={menuIconClick}>
-                {/* changing menu collapse icon on click */}
-              {menuCollapse ? (
-                <FiArrowRightCircle/>
-              ) : (
-                <FiArrowLeftCircle/>
-              )}
-            </div>
-          </SidebarHeader>
-          <SidebarContent>
-            <Menu iconShape="square">
-              <MenuItem active={true} icon={<FiHome />}>
-                Home
-              </MenuItem>
-              <MenuItem icon={<FaList />}>Category</MenuItem>
-              <MenuItem icon={<FaRegHeart />}>Favourite</MenuItem>
-              <MenuItem icon={<RiPencilLine />}>Author</MenuItem>
-              <MenuItem icon={<BiCog />}>Settings</MenuItem>
-            </Menu>
-          </SidebarContent>
-          <SidebarFooter>
-            <Menu iconShape="square">
-              <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
-            </Menu>
-          </SidebarFooter>
-        </ProSidebar>
-      </div>
-    </>
-  );
-};
+    <div className="flex justify-between items-center flex-col sticky top-5 h-[93vh]">
+      <Link to="/">
+        <Icon styles="w-[52px] h-[52px] bg-[#2c2f32]" imgUrl={logo} />
+      </Link>
 
-export default Header;
+      <div className="flex-1 flex flex-col justify-between items-center bg-[#1c1c24] rounded-[20px] w-[76px] py-4 mt-12">
+        <div className="flex flex-col justify-center items-center gap-3">
+          {navlinks.map((link) => (
+            <Icon 
+              key={link.name}
+              {...link}
+              isActive={isActive}
+              handleClick={() => {
+                if(!link.disabled) {
+                  setIsActive(link.name);
+                  navigate(link.link);
+                }
+              }}
+            />
+          ))}
+        </div>
+
+        <Icon styles="bg-[#1c1c24] shadow-secondary" imgUrl={sun} />
+      </div>
+    </div>
+  )
+}
+
+export default Sidebars
