@@ -1,12 +1,16 @@
 {
   "name": "builder",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
-    "@craco/craco": "^7.0.0",
-    "@mui/core": "^5.0.0-alpha.49",
-    "@mui/utils": "^5.0.1",
     "@mui/icons-material": "^5.11.0",
+    "@mui/utils": "^5.0.1",
     "@react-oauth/google": "^0.6.0",
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,8 +18,10 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.2",
     "chart.js": "^4.2.0",
+    "dayjs": "^1.11.7",
     "jwt-decode": "^3.1.2",
     "node-sass": "^7.0.3",
+    "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-chartjs-2": "^5.2.0",
@@ -29,19 +35,13 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.1",
     "styled-components": "^5.3.6",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "@vitejs/plugin-react": "^3.0.1",
+    "dotenv": "^16.0.3",
+    "vite": "^4.0.4"
   },
   "browserslist": {
     "production": [
@@ -54,8 +54,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "dotenv": "^16.0.3"
   }
 }

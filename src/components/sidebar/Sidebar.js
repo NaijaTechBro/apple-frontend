@@ -12,7 +12,8 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
 import { Link } from "react-router-dom";
 const Container = styled.div`
-  flex: 1;
+  width: 230px;
+  display: flex;
   background-color: ${({ theme }) => theme.bgLighter};
   height: 100vh;
   color: ${({ theme }) => theme.text};
@@ -100,7 +101,7 @@ const Sidebars = ({ darkMode, setDarkMode }) => {
           </Item>
         </Link>
         <Link
-          to="savings"
+          to="/savings"
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <Item>

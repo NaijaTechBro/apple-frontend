@@ -44,7 +44,7 @@ const LoginWithCode = () => {
 
   useEffect(() => {
     if (isLoggedIn && isSuccess) {
-      navigate("/profile");
+      navigate("/dashboard/business");
     }
     dispatch(RESET());
   }, [isSuccess, isLoggedIn, navigate, dispatch]);
